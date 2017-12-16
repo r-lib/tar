@@ -7,5 +7,6 @@
 #' version.
 #'
 #' @docType package
+#' @useDynLib tar, .registration = TRUE, .fixes = "C_"
 #' @name tar
 NULL

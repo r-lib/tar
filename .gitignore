@@ -1,3 +1,5 @@
 .Rproj.user
 .Rhistory
 .RData
+/src/tar.so
+/src/*.o
