@@ -380,8 +380,10 @@ tar <- function(tarfile, files = NULL,
 ### ----- from here on, using internal code -----
         ## must do this before tarfile is created
         if(is.null(files)) files <- "."
-        files <- list.files(files, recursive = TRUE, all.files = TRUE,
-                            full.names = TRUE, include.dirs = TRUE)
+        descend <- files[file.info(files)$isdir]
+        files <- union(files,
+                       list.files(descend, recursive = TRUE, all.files = TRUE,
+                                  full.names = TRUE, include.dirs = TRUE))
 
         con <- switch(match.arg(compression),
                       "none" =  file(tarfile, "wb"),
