@@ -17,9 +17,11 @@ issues, so we can have a stable implementation that works with any R version.
 
 ## Installation
 
+Once on CRAN, install the package the usual way:
+
 
 ```r
-devtools::install_github("r-lib/tar")
+install.packages("tar")
 ```
 
 ## Usage
